@@ -41,7 +41,7 @@ const generatePdf = async(req, res, next) => {
             products:obj
         },
         // path:'/docs/'+ filename
-        path:'/docs/'+ filename
+        path:'./docs/'+ filename
     }
     
     pdf.create(document, options)
@@ -53,10 +53,10 @@ const generatePdf = async(req, res, next) => {
 
     const filepath = 'http://localhost:3000/docs/' + filename;
     
-    console.log(filepath, "file path download" );
+    
 
     res.render('download', {
-        path: filepath
+        path: filepath,
     });
 }
 
