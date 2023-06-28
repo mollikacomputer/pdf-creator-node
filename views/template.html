@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=P, initial-scale=1.0">
+    <title>PDF Document</title>
+</head>
+<body>
+    <div class="overflow-x-auto">
+        <table class="table table-zebra">
+          <!-- head -->
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>price</th>
+              <th>quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- row 1 -->
+            {{#each products.prodlist}}
+            <tr>
+              <th> {{this.name}} </th>
+              <td> {{this.description}} </td>
+              <td>${{this.price}}</td>
+              <td>{{this.quantity}} </td>
+              <td>${{this.total}} </td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+</body>
+</html>
